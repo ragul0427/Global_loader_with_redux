@@ -1,22 +1,21 @@
-// Loader.js
-import React from 'react';
-import { connect } from 'react-redux';
 
-const Loader = ({ isLoading }) => {
+// src/components/Loader.js
+
+import React from 'react';
+import { useSelector } from 'react-redux';
+
+const Loader = () => {
+  const isLoading = useSelector((state) => state.loader.isLoading);
+
   if (!isLoading) {
     return null; // Render nothing if not loading
   }
 
   return (
     <div className="loader">
-      {/* Render your loader animation or spinner here */}
-      Loading...
+      <span>Loading...</span>
     </div>
   );
 };
 
-const mapStateToProps = (state) => ({
-  isLoading: state.loading,
-});
-
-export default connect(mapStateToProps)(Loader);
+export default Loader;
