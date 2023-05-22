@@ -1,11 +1,14 @@
-// store.js
+
+
+// src/redux/store.js
+
 import { configureStore } from '@reduxjs/toolkit';
-import loadingReducer from './loadingSlice';
+import loaderReducer from './loaderSlice';
 
 const store = configureStore({
   reducer: {
-    loading: loadingReducer,
-    // other reducers for your app
+    loader: loaderReducer,
+    // other reducers...
   },
 });
 
