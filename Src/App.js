@@ -1,18 +1,16 @@
-// App.js
+
+// src/App.js
+
 import React from 'react';
-import { Provider } from 'react-redux';
-import store from './store';
-import Loader from './Loader';
-import ProductList from './ProductList';
+import Loader from './components/Loader';
+// Other imports...
 
 const App = () => {
   return (
-    <Provider store={store}>
-      <div>
-        <Loader />
-        <ProductList />
-      </div>
-    </Provider>
+    <div>
+      {/* Your app components */}
+      <Loader />
+    </div>
   );
 };
 
